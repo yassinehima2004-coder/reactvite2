@@ -1,5 +1,10 @@
+import Cardshop from "../components/Cardshop";
+
+
+
 export default function Home() {
   return (
+    <>
     <section className="relative overflow-hidden bg-gradient-to-r from-[#F6EAD9] via-[#F9F3EB] to-[#D9E8EA] z-30">
       
       {/* Pattern (optionnel paw) */}
@@ -43,5 +48,7 @@ export default function Home() {
       {/* Bottom fade */}
       <div className="h-16 bg-gradient-to-t from-[#F8F0E3] to-transparent"></div>
     </section>
+    <Cardshop/>
+    </>
   );
 }

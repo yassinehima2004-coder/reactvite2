@@ -10,4 +10,18 @@ export default defineConfig({
     babel({ presets: [reactCompilerPreset()] }),
     tailwindcss(),
   ],
+  server: {
+    host: 'localhost',
+    port: 5173,
+    strictPort: false,
+    hmr: {
+      host: 'localhost',
+      port: 5173,
+      protocol: 'ws',
+    },
+    watch: {
+      usePolling: true,
+      interval: 100,
+    },
+  },
 })
