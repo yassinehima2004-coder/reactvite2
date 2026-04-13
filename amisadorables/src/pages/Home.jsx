@@ -1,8 +1,10 @@
+import Avisclient from "../components/Avisclient";
 import Cardshop from "../components/Cardshop";
-
+import { Link } from "react-router-dom";
 
 
 export default function Home() {
+
   return (
     <>
     <section className="relative overflow-hidden bg-gradient-to-r from-[#F6EAD9] via-[#F9F3EB] to-[#D9E8EA] z-30">
@@ -25,11 +27,11 @@ export default function Home() {
 
           <div className="mt-8 flex gap-4">
             <button className="bg-[#F07C1F] hover:bg-[#D96B14] text-white px-6 py-3 rounded-full shadow-lg transition">
-              Adopter maintenant
+              <a href="#nosanimaux">Adopter maintenant</a>
             </button>
 
             <button className="border border-[#4B2E23] text-[#4B2E23] px-6 py-3 rounded-full hover:bg-[#4B2E23] hover:text-white transition">
-              En savoir plus
+              <Link to="/about">En savoir plus</Link> 
             </button>
           </div>
         </div>
@@ -49,6 +51,7 @@ export default function Home() {
       <div className="h-16 bg-gradient-to-t from-[#F8F0E3] to-transparent"></div>
     </section>
     <Cardshop/>
+    <Avisclient/>
     </>
   );
 }
